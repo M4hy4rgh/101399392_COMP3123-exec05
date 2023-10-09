@@ -10,6 +10,7 @@ const userData = require('./user.json');
 - add <h1> tag with message "Welcome to ExpressJs Tutorial"
 - Return home.html page to client
 */
+// link: http://localhost:8081/home
 router.get('/home', (req, res) => {
   res.sendFile(__dirname + '/home.html');
 });
@@ -18,6 +19,7 @@ router.get('/home', (req, res) => {
 /*
 - Return all details from user.json file to client as JSON format
 */
+// link: http://localhost:8081/profile
 router.get('/profile', (req, res) => {
   fs.readFile('user.json', 'utf8', (err, data) => {
     if (err) {
